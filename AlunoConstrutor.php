@@ -1,7 +1,6 @@
 <?php
 class Aluno
 {
-    // Base do RA no padrão da Fatec
     private static $ra_base = 1571432612000;
     private $ra;
     private $nome;
@@ -11,7 +10,6 @@ class Aluno
     {
         self::$contador++;
         $this->nome = $nome;
-        // RA segue o padrão Fatec: base + 1, base + 2, base + 3...
         $this->ra = self::$ra_base + self::$contador;
     }
     public function getRa()
@@ -37,10 +35,10 @@ class Aluno
 }
 function Main()
 {
-    $a1 = new Aluno("Primeiro aluno");  // 1571432612001
-    $a2 = new Aluno("Segundo aluno");   // 1571432612002
-    $a3 = new Aluno("Terceiro aluno");  // 1571432612003
-    $a4 = new Aluno("Quarto aluno");  // 1571432612004
+    $a1 = new Aluno("Primeiro aluno");
+    $a2 = new Aluno("Segundo aluno");
+    $a3 = new Aluno("Terceiro aluno");
+    $a4 = new Aluno("Quarto aluno");
     $a1->MostrarAtributos();
     $a2->MostrarAtributos();
     $a3->MostrarAtributos();
